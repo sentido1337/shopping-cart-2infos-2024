@@ -33,4 +33,19 @@ function adicionarAoCarrinho(livro) {
   }
 }
 
-export { carrinho, adicionarAoCarrinho, removerItemCarrinho, atualizaQuantidadeItem }
+function limparCarrinho(){
+  carrinho.value.itens = [];
+  carrinho.value.total = 0;
+}
+
+function finalizarCompra(){
+
+}
+
+
+
+
+
+
+
+export { carrinho, adicionarAoCarrinho, removerItemCarrinho, atualizaQuantidadeItem, limparCarrinho }

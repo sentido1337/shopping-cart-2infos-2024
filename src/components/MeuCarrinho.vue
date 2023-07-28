@@ -1,7 +1,8 @@
 <script setup>
-import { carrinho, removerItemCarrinho, atualizaQuantidadeItem } from '@/_data/carrinho.js'
+import { carrinho, removerItemCarrinho, atualizaQuantidadeItem, limparCarrinho } from '@/_data/carrinho.js'
 import MButton from './MButton.vue'
 import CarrinhoVazio from './CarrinhoVazio.vue'
+
 
 function formatarPreco(preco) {
   return 'R$ ' + preco.toFixed(2).replace('.', ',')
@@ -41,10 +42,8 @@ function formatarPreco(preco) {
           </div>
         </div>
       </div>
-      <m-button text="Limpar carrinho" />
+      <m-button @click="limparCarrinho()" text="Limpar carrinho" />
       <m-button text="Finalizar compra" />
-      <m-button text="Continuar comprando" />
-      <m-button text="Salvar" />
       <p class="carrinho-total">Total: {{ formatarPreco(carrinho.total) }}</p>
     </div>
   </div>
@@ -102,8 +101,5 @@ function formatarPreco(preco) {
   width: 30px;
   margin-right: 10px;
 }
-
-.carrinho {
-  /* min-width: 20%; */
-}
 </style>
+
