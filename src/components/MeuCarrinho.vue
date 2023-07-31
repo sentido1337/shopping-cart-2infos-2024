@@ -2,6 +2,8 @@
 import { carrinho, removerItemCarrinho, atualizaQuantidadeItem, limparCarrinho } from '@/_data/carrinho.js'
 import MButton from './MButton.vue'
 import CarrinhoVazio from './CarrinhoVazio.vue'
+import mensagem from'@/components/mensagem.vue';
+import formulario from './formulario.vue';
 
 
 function formatarPreco(preco) {

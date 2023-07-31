@@ -1,6 +1,7 @@
 <script setup>
 import MButton from './MButton.vue'
-
+import favoritos from './favoritos.vue';
+import {adicionarAoCarrinho} from '@/_data/carrinho.js'
 const props = defineProps({
   livro: Object
 })
@@ -36,7 +37,7 @@ function formatarPreco(preco) {
 .card-livro {
   margin: 5px 10px;
   padding: 10px;
-  background-color: beige;
+  background-color: rgb(190, 4, 4);
   border-radius: 10px;
   width: 180px;
   display: flex;
@@ -48,7 +49,7 @@ function formatarPreco(preco) {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: rgb(192, 4, 4);
   border-radius: 10px;
   width: 180px;
   height: 270px;
